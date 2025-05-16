@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/80ff523f-ff84-457d-a547-464588d3a3d3/dfnaw8c-b633277f-34c0-48aa-ad1d-65e4b7ec734c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgwZmY1MjNmLWZmODQtNDU3ZC1hNTQ3LTQ2NDU4OGQzYTNkM1wvZGZuYXc4Yy1iNjMzMjc3Zi0zNGMwLTQ4YWEtYWQxZC02NWU0YjdlYzczNGMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.SEuP5S6boJRgGgxmydtVYlSSsvNzWFD0F2xfvK85ycg') no-repeat center center;
+    background-size: cover;
+}
+
+/* CARD: estructura flexible */
+.card {
+    width: 90%;
+    max-width: 400px;
+    margin: 5vh auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    border: 1px solid #ffffff;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Títulos principales */
+.title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo del Pokémon */
+.card__title {
+    color: white;
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+/* Imagen */
+.img__container {
+    margin: 20px auto 0;
+    width: 100%;
+    max-width: 320px;
+}
+
+.img__pokemon {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: contain;
+}
+
+/* RESPONSIVE extra para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .card__title {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .img__pokemon {
+        max-height: 200px;
+    }
+}

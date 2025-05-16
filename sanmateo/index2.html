@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmilenio</title>
+    <link rel="stylesheet" href="css/estilos2.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="recursos/imagenes/logo2.png" alt="Logo Transmilenio" class="logo">
+            <h1>Transmilenio</h1>
+        </div>
+        <nav>
+            <ul>
+                <a href="index2.html">Inicio</a></li>
+                <li><a href="#">TRANSMILENIO S.A</a></li>
+                <li><a href="#">Viaje En TransMi</a></li>
+                <li><a href="#">Transmicable</a></li>
+                <li><a href="Descubre.html">Descubre Bogota</a></li>
+                <li><a href="noticias.html">Noticias Pag Universidad</a></li>
+                <li><a href="#">Transparencia</a></li>
+                <li><a href="https://www.transmilenio.gov.co/publicaciones/152750/participa/" target="_blank">Participa</a></li>
+                <li><a href="#">Atencion Y Servicio De La Ciudadania</a></li>
+                <li><a href="#">Negocios</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section>
+        <h2 class="centrado">Bienvenidos a Transmilenio</h2>
+        <div class="contenedor-slider">
+            <img id="slider" src="recursos/imagenes/slide3.jpg" alt="Transmilenio" style="width: 100%; max-width: 600px; max-height: 200px;">
+        </div>
+    </section>
+    <h1>Fundación Universitaria San Mateo</h1>
+
+
+    <main>
+        <h2 class="centrado">Catalogo De Noticias</h2>
+        <div class="catalogo-container">
+            <button class="catalogo-btn prev" onclick="moverCatalogo(-1)">&#10094;</button>
+        
+            <div class="catalogo" id="catalogoCarrusel">
+                <div class="programa">
+                <img src="recursos/imagenes/slide1.jpeg" alt="Transmilenio">
+                <p>TransMi tiene alternativas de viaje para usuarios de estación Tercer Milenio</p>
+                </div>
+                <div class="programa">
+                <img src="recursos/imagenes/slide2.jpeg" alt="Transmilenio">
+                <p>Metrocable una realidad en San Cristobal</p>
+                </div>
+                <div class="programa">
+                <img src="recursos/imagenes/1.jpg" alt="Transmilenio">
+                <p>Servicio TransMiZonal 1-7 Quirigua suspende una parada</p>
+                </div>
+                <div class="programa">
+                    <img src="recursos/imagenes/3.jpeg" alt="Transmilenio">
+                    <p>Abren una nueva estacion de TransMilenio</p>
+                </div>
+                <div class="programa">
+                    <img src="recursos/imagenes/5.jpeg" alt="Transmilenio">
+                    <p>Sí hay empleo para ser operadores de TransMilenio</p>
+                </div>
+                
+            </div>
+            <button class="catalogo-btn next" onclick="moverCatalogo(1)">&#10095;</button>
+            <h2 class="centrado">Pagina oficial Transmilenio</h2>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Transmilenio</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# Importamos el módulo 're' para trabajar con expresiones regulares
+import re
+
+# Definimos la función que validará una dirección de domicilio
+def validar_direccion():
+    # Solicitamos al usuario que ingrese su dirección
+    direccion = input("Ingrese su dirección de domicilio: ")
+    
+    # Definimos el patrón de expresión regular que valida direcciones típicas colombianas
+    patron = re.compile(
+        r"^(Calle|Carrera|Transversal|Diagonal|Av\.?\s?(Calle|Carrera)?)"  # Tipos de vía permitidos
+        r"\s?\d+[A-Z]?"                     # Número de vía con letra opcional (ej. 45A)
+        r"(?:\s?#|No\.?)"                   # Separador '#' o 'No.' opcional
+        r"\s?\d+[A-Z]?[-]?\d*$",            # Número de predio, con letra y guion opcional (ej. 12B-30)
+        re.IGNORECASE                      # Ignora mayúsculas y minúsculas en la comparación
+    )
+    
+    # Evaluamos si la dirección ingresada cumple con el patrón
+    if patron.match(direccion):
+        # Si cumple, informamos que la dirección es válida
+        print("✅ La dirección es válida.")
+    else:
+        # Si no cumple, informamos que es inválida y damos ejemplos válidos
+        print("❌ La dirección no es válida. Ej: Calle 45 #12-30 o Carrera 7 No. 80-60.")
+
+# Función principal que llama a la función de validación
+def main():
+    validar_direccion()
+
+# Verificamos si el archivo se está ejecutando directamente
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmilenio</title>
+    <link rel="stylesheet" href="css/estilos2.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="recursos/imagenes/logo2.png" alt="Logo Transmilenio" class="logo">
+            <h1>Transmilenio</h1>
+        </div>
+        <nav>
+            <<ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="salario.html">Salario</a></li>
+                <li><a href="contactenos.html">Contáctenos</a></li>
+                <li><a href="bienestar.html">Bienestar</a></li>
+                <li><a href="poke.html">Pokemon</a></li>
+                <li><a href="aula virtual.html">Aula Virtual</a></li>
+                <li><a href="https://www.sanmateo.edu.co/" target="_blank" rel="noopener noreferrer">Página Oficial</a></li> <!-- ✅ rel seguridad -->
+            </ul>
+        </nav>
+    </header>
+    
+        <main>
+            <section>
+            <h2 style="text-align: center;">Formulario de Contacto Ciudadano</h2>
+            <form id="formContacto" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 10px;">
+                
+                <label for="nombre"class="centrado">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+        
+                <label for="correo"class="centrado">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+        
+                <label for="telefono"class="centrado">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+        
+                <label for="direccion"class="centrado">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+        
+                <label for="ciudad"class="centrado">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+        
+                <label for="barrio"class="centrado">Barrio:</label>
+                <input type="text" id="barrio" name="barrio" required>
+        
+                <label for="mensaje"class="centrado">Solicitud:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        
+                <button type="submit" class="button"class="centrado">Enviar</button>
+                <label id="mensajecambio" style="margin-top: 15px; color: #000000; font-weight: bold;"class="centrado"></label>
+            </form>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; Transmilenio</p>
+        </footer>
+        
+        <script>
+            document.getElementById('formContacto').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const telefono = document.getElementById('telefono').value;
+            const direccion = document.getElementById('direccion').value;
+            const ciudad = document.getElementById('ciudad').value;
+            const barrio = document.getElementById('barrio').value;
+            const mensaje = document.getElementById('mensaje').value;
+        
+            const datos = 
+                "Nombre: " + nombre + "\n" +
+                "Correo: " + correo + "\n" +
+                "Teléfono: " + telefono + "\n" +
+                "Dirección: " + direccion + "\n" +
+                "Ciudad: " + ciudad + "\n" +
+                "Barrio: " + barrio + "\n" +
+                "Solicitud: " + mensaje;
+        
+            alert("Datos del formulario:\n" + datos);
+            document.getElementById('mensajecambio').innerText = datos;
+            });
+        </script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+/* ========= ESTILOS GENERALES ========= */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #05786c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* ✅ Nuevo: permite que el menú se ajuste si no cabe */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 40px 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(9, 126, 95, 0.1);
+    text-align: center;
+}
+
+footer {
+    background-color: #05786c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    background-color: #05786c;
+    color: white;
+    flex-wrap: wrap; /* ✅ Nuevo: permite que los elementos se acomoden en móviles */
+    gap: 10px;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.logo {
+    width: 15vw; /* ✅ Cambiado de 100px a vw para adaptabilidad */
+    height: auto;
+}
+
+.texto-centro {
+    flex: 1;
+    text-align: center;
+    font-size: 2rem; /* ✅ Cambiado a rem para escalabilidad */
+    font-weight: bold;
+}
+
+.clima-info {
+    text-align: right;
+}
+
+.clima-info h1 {
+    margin: 6px 0;
+}
+
+#temperatura-valor {
+    font-size: 1.5rem;
+}
+
+#temperatura-descripcion {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#ubicacion {
+    font-size: 1.1rem;
+}
+
+#iconoAnimado {
+    width: 40px;
+    height: auto;
+    margin-top: 5px;
+}
+
+/* ========= CARRUSEL (CATÁLOGO) ========= */
+.catalogo-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.catalogo {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+    flex-wrap: nowrap; /* ✅ Mantener horizontal en escritorio */
+}
+
+.programa {
+    min-width: 300px;
+    flex-shrink: 0;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.programa img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Botones carrusel */
+.catalogo-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.catalogo-btn.prev {
+    left: 10px;
+}
+
+.catalogo-btn.next {
+    right: 10px;
+}
+
+.catalogo-btn:hover {
+    background-color: #333;
+}
+
+/* ========= SLIDER CENTRAL ========= */
+.contenedor-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.contenedor-secciones {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(rgba(81, 81, 81, 0.4), #05786c);
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    color: white;
+    border-radius: 10px;
+    flex-wrap: wrap; /* ✅ Para adaptarse a pantallas pequeñas */
+    gap: 20px;
+}
+
+#contenido {
+    width: 60%;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.botonera {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.botonera button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.botonera button:hover,
+.botonera button.activo {
+    background-color: #05786c;
+    color: black;
+}
+
+/* ========================
+   MEDIA QUERIES RESPONSIVE
+   ======================== */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 991px) {
+    .contenedor-secciones {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #contenido,
+    .botonera {
+        width: 90%;
+        text-align: center;
+    }
+
+    .botonera {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .botonera button {
+        flex: 1 1 45%;
+    }
+
+    .catalogo {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Celulares (pantallas pequeñas) */
+@media (max-width: 600px) {
+    header,
+    footer {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .programa {
+        min-width: 90%;
+    }
+
+    .catalogo-btn {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .botonera button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .contenedor-slider img {
+        width: 100%;
+        max-height: 250px;
+    }
+}

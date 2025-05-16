@@ -1,0 +1,164 @@
+/* === ESTILOS GENERALES === */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #ffffff; 
+    color: #333333; 
+}
+.centrado {
+    text-align: center;
+}
+
+header { 
+    background-color: #c8102e; /* Rojo institucional */ 
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center; 
+}
+
+header h1 { 
+    margin: 0; 
+    font-size: 24px; 
+}
+
+nav { 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;             /* Convierte la lista en fila */
+    justify-content: center;   /* Centra horizontalmente */
+    flex-wrap: wrap;           /* Permite que salte de línea si hay muchos items */
+    gap: 15px;  
+}
+
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    margin: 0 15px; 
+    font-weight: bold; 
+}
+
+nav a:hover { 
+    text-decoration: underline; 
+}
+
+main { 
+    padding: 20px; 
+}
+
+section { 
+    margin-bottom: 20px; 
+}
+
+h2 { 
+    color: #c8102e; 
+}
+
+.button { 
+    background-color: #c8102e; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+.button:hover { 
+    background-color: #9e0b1f; 
+}
+
+footer { 
+    background-color: #eeeeee; 
+    text-align: center; 
+    padding: 15px; 
+    font-size: 14px; 
+    color: #666666; 
+}
+
+/* === ESTILOS PARA MENÚ RESPONSIVO === */
+@media (max-width: 600px) { 
+    nav a {
+        display: block;
+        margin: 10px 0;
+        flex-direction: column; 
+        align-items: center;
+    }
+    .contenedor-slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+    }
+    .button { 
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+}
+
+/* === ESTILOS DEL CARRUSEL DÉMICO (CATÁLOGO) === */
+.catalogo-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.catalogo {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+.programa {
+    min-width: 300px;
+    flex-shrink: 0;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.programa img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Botones de navegación del carrusel */
+.catalogo-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.catalogo-btn.prev {
+    left: 10px;
+}
+
+.catalogo-btn.next {
+    right: 10px;
+}
+
+.catalogo-btn:hover {
+    background-color: #333;
+}
+
+/* === ESTILOS PARA EL SLIDER CENTRAL (si se usa) === */
+.contenedor-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}

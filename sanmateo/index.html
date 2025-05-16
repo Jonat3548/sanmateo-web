@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+
+    <meta name="description" content="Página oficial de la Universidad San Mateo. Información sobre programas académicos, noticias, servicios y más."> 
+    <meta name="keywords" content="universidad, educación, san mateo, programas, clases, Bogotá"> 
+    <meta name="author" content="Universidad San Mateo">
+    <title>Universidad 2 San Mateo - Educación de Calidad en Bogotá</title> 
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="recursos/imagenes/logo.png" style="height: 60px;" alt="Logo Universidad San Mateo" title="Universidad San Mateo">
+            <h1>Universidad  2 San Mateo</h1>
+            <div class="clima-info" aria-label="Información del clima"> 
+                <div id="caja1">
+                    <h2 id="temperatura-valor">--°C</h2> 
+                    <p id="temperatura-descripcion">Cargando...</p> 
+                </div>
+                <div id="caja2">
+                    <h2 id="ubicacion">Ubicación</h2>
+                    <img id="iconoAnimado" src="" alt="Icono del clima actual" loading="lazy"> 
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Menú de navegación principal"> 
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="salario.html">Salario</a></li>
+                <li><a href="contactenos.html">Contáctenos</a></li>
+                <li><a href="bienestar.html">Bienestar</a></li>
+                <li><a href="poke.html">Pokemon</a></li>
+                <li><a href="aula virtual.html">Aula Virtual</a></li>
+                <li><a href="https://www.sanmateo.edu.co/" target="_blank" rel="noopener noreferrer">Página Oficial</a></li> 
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contenedor-slider" aria-label="Carrusel de imágenes institucionales">
+            <img id="slider" src="recursos/imagenes/slide3.jpg" alt="Vista aérea Universidad San Mateo" 
+                style="width: 100%; max-width: 1000px; max-height: 500px;" loading="lazy">
+        </section>
+
+        <section class="contenedor-secciones">
+            <article id="contenido">
+                <h2>Oficina de Egresados</h2> 
+                <p>
+                    La oficina de egresados es el área encargada de promover la interacción con los egresados, 
+                    propiciando espacios de retroalimentación que aporten al mejoramiento continuo, a través de 
+                    los diferentes programas (Monitoreo y seguimiento del impacto de los egresados, fortalecimiento 
+                    de la fidelización, relación con la institución e intercambio de experiencias académicas).
+                </p>
+            </article>
+
+            <div class="botonera" aria-label="Botones de navegación de contenido">
+                <button onclick="mostrarContenido('prensa')" class="activo">¿Quiénes somos?</button>
+                <button onclick="mostrarContenido('educacion')">Política</button>
+                <button onclick="mostrarContenido('editorial')">Tasa de Cambio</button> 
+                <button onclick="mostrarContenido('pagos')">Pagos</button>
+                <button onclick="mostrarContenido('juridico')">Consultorio Jurídico</button>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="centrado">Catálogo de Noticias</h2>
+            <div class="catalogo-container" aria-label="Catálogo de programas y noticias">
+                <button class="catalogo-btn prev" onclick="moverCatalogo(-1)" aria-label="Anterior">&#10094;</button>
+                <div class="catalogo" id="catalogoCarrusel">
+                    <article class="programa">
+                        <img src="recursos/imagenes/slide1.jpeg" alt="Estudiante con uniforme" loading="lazy">
+                        <p>Matrículate en 2025-2, variedad de programas</p>
+                    </article>
+                    <article class="programa">
+                        <img src="recursos/imagenes/slide2.jpeg" alt="Inicio de clases" loading="lazy">
+                        <p>Empieza con energía este 2025</p>
+                    </article>
+                    <article class="programa">
+                        <img src="recursos/imagenes/slide3.jpg" alt="Campus de la universidad" loading="lazy">
+                        <p>Conoce nuestras instalaciones</p>
+                    </article>
+                    <article class="programa">
+                        <img src="recursos/imagenes/3.jpeg" alt="Clase de Ingeniería de Sistemas" loading="lazy">
+                        <p>Estudia Ingeniería de Sistemas</p>
+                    </article>
+                    <article class="programa">
+                        <img src="recursos/imagenes/5.jpeg" alt="Prácticas profesionales" loading="lazy">
+                        <p>Conectamos con tus prácticas profesionales</p>
+                    </article>
+                </div>
+                <button class="catalogo-btn next" onclick="moverCatalogo(1)" aria-label="Siguiente">&#10095;</button>
+            </div>
+        </section>
+
+        <section aria-label="Información adicional">
+            <p>Este es el sitio web oficial de la Universidad San Mateo.</p>
+            <p id="valorDolar">Cargando tasa de cambio...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Universidad San Mateo. Todos los derechos reservados.</p> 
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

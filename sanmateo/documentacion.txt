@@ -1,0 +1,129 @@
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;             /* Convierte la lista en fila */
+  justify-content: center;  /* Centra horizontalmente */
+  flex-wrap: wrap;          /* Permite que salte de línea si hay muchos items */
+  gap: 15px;                /* Espacio entre elementos */
+}
+
+nav ul li {
+  display: inline-block;     /* Asegura que no rompan línea */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto al pasar el cursor */
+  border-radius: 5px;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Universidad San Mateo</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <img src="recursos/imagenes/logo-sanmateo.png" alt="Logo Universidad San Mateo" style="height: 60px;">
+    <h1>Universidad San Mateo</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="programas.html">Programas</a></li>
+        <li><a href="#">Bienestar</a></li>
+        <li><a href="#">Plataformas</a></li>
+        <li><a href="contactenos.html">Contáctenos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Bienvenidos</h2>
+    <p>Este es el sitio web oficial de la Universidad San Mateo.</p>
+    <div class="slider">
+      <img id="slide" src="recursos/imagenes/slide1.jpg" alt="Slider Universidad" style="width:100%; max-height:400px;">
+    </div>
+  </section>
+
+  <main>
+    <h2>Catálogo de Programas</h2>
+    <div class="catalogo">
+      <div class="programa">
+        <img src="recursos/imagenes/ingenieria.jpg" alt="Ingeniería de Sistemas">
+        <h3>Ingeniería de Sistemas</h3>
+        <p>Desarrolla soluciones tecnológicas para el mundo actual. Modalidad presencial y virtual.</p>
+        <a href="#" class="btn">Ver más</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad San Mateo</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+    
+    <section>
+        <h2>Bienvenidos</h2>
+        <p>Este es el sitio web oficial de la Universidad San Mateo.</p>
+    
+        <div class="slider">
+            <button class="prev" onclick="anteriorImagen()">&#10094;</button>
+            <img id="slide" src="recursos/imagenes/slide1.jpeg" alt="Slider TransMilenio">
+            <img id="slide" src="recursos/imagenes/slide2.jpeg" alt="Slider TransMilenio">
+            <img id="slide" src="recursos/imagenes/slide3.jpeg" alt="Slider TransMilenio">
+
+            <button class="next" onclick="siguienteImagen()">&#10095;</button>
+        </div>
+    </section>  
+
+    <footer>
+        <p>&copy; 2025 Universidad San Mateo</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+header {
+    background-color: #c8102e; /* Rojo institucional */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    background-color: #9e0b1f;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none; /
+    padding: 0;
+    margin: 0;

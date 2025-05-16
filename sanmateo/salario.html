@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- ✅ Buen uso de charset -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ Vista responsiva -->
+
+
+    <meta name="description" content="Página oficial de la Universidad San Mateo. Información sobre programas académicos, noticias, servicios y más."> <!-- ✅ SEO description -->
+    <meta name="keywords" content="universidad, educación, san mateo, programas, clases, Bogotá"> <!-- ✅ SEO keywords -->
+    <meta name="author" content="Universidad San Mateo">
+    <title>Universidad San Mateo - Educación de Calidad en Bogotá</title> <!-- ✅ Título más específico para SEO -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="recursos/imagenes/logo.png" style="height: 60px;">
+            <h1>Universidad San Mateo</h1>
+            <div class="clima-info">
+                <div id="caja1">
+                    <h1 id="temperatura-valor">--°C</h1>
+                    <h1 id="temperatura-descripcion">Cargando...</h1>
+                </div>
+                <div id="caja2">
+                    <h1 id="ubicacion">Ubicación</h1>
+                    <img id="iconoAnimado" src="" alt="Icono del clima">
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="clases.html">Clases</a></li>
+                <li><a href="salario.html">Salario</a></li>
+                <li><a href="contactenos.html">Contáctenos</a></li>
+                <li><a href="bienestar.html">Bienestar</a></li>
+                <li><a href="poke.html">Pokemon</a></li>
+                <li><a href="aula virtual.html">Aula Virtual</a></li>
+                <li><a href="https://www.sanmateo.edu.co/" target="_blank" rel="noopener noreferrer">Página Oficial</a></li> <!-- ✅ rel seguridad -->
+            </ul>
+        </nav>
+    </header>
+
+    <h1 id="listo3" class="centrado">Cargando...</h1>
+    <h1 id="listo4" class="centrado">Cargando...</h1>
+    <h1 id="listo5" class="centrado">Cargando...</h1>
+    <h1 id="listo6" class="centrado">Cargando...</h1>
+
+
+    <section>
+        <div class="contenedor-secciones">
+            <div id="contenido">
+                <p>Seleccione la carrera</p>
+                
+                <ul id="lista-asignaturas"></ul>
+            </div>
+
+            
+            <div class="botonera">
+                <button class="activo" id="listo">cargar api</button>
+                <button id="mat2">cargar api</button>
+                <button id="mat3">cargar api</button>
+                <button onclick="mostrarContenido('editorial')">Taza De Cambio</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Universidad San Mateo. Todos los derechos reservados.</p> 
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
